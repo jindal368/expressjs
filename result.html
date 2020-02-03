@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920px, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js"></script>
+    <title>Result</title>
+</head>
+<body>
+    <h1 style="background-color: aqua;">This page is about to result of your BMI.</h1>
+    <script>
+        app.post("/bmi",function(req,res){
+   
+   let n1 =Number(req.body.v1);
+   let name = req.body.v3;
+   let n2 = Number(req.body.v2);
+   let s = n1/(n2*n2);
+   res.sendFile(__dirname+"/result.html");
+   res.send(name+"<h1>Your BMI is :</h1>"+s);
+   
+});
+    res.send(name+"<h1>Your BMI is :</h1>"+s);
+    </script>
+</body>
+</html>
